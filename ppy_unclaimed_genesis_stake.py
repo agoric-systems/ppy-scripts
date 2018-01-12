@@ -34,7 +34,7 @@ for genesis_entry in unclaimed_crowdsale_genesis_entries:
     # skip claimed entries
     if genesis_entry is None:
         continue
-    normalized_amount = int(genesis_entry['amount']) / 10000
+    normalized_amount = int(genesis_entry['amount']) / 100000
     remaining_unclaimed_genesis_entries += ("%s | %s PPY\n" % (genesis_entry['owner'], normalized_amount))
     total_unclaimed_stake += int(amount)
 
