@@ -36,7 +36,7 @@ for genesis_entry in unclaimed_crowdsale_genesis_entries:
         continue
     normalized_amount = int(genesis_entry['amount']) / 100000
     remaining_unclaimed_genesis_entries += ("%s | %s PPY\n" % (genesis_entry['owner'], normalized_amount))
-    total_unclaimed_stake += int(amount)
+    total_unclaimed_stake += int(genesis_entry['amount'])
 
 normalized_total_stake_claimed = total_stake_claimed / 100000
 normalized_total_stake_unclaimed = total_unclaimed_stake / 100000
@@ -44,7 +44,7 @@ normalized_total_stake_unclaimed = total_unclaimed_stake / 100000
 print("Total claimed crowdsale and vesting stake:\n %s PPY" % normalized_total_stake_claimed)
 print("Total claimed crowdsale and vesting stake as percentage of \ntotal supply:\n %s" % ((normalized_total_stake_claimed / TOTAL_PPY_SUPPLY) * 100) + " %")
 print("Total unclaimed crowdsale and vesting stake:\n %s PPY" % normalized_total_stake_unclaimed)
-print("Total unclaimed crowdsale stake as percentage of total supply:\n %s" % ((normalized_total_stake_unclaimed / TOTAL_PPY_SUPPLY) * 100) + " %")
+print("Total unclaimed crowdsale and vesting stake as percentage of total supply:\n %s" % ((normalized_total_stake_unclaimed / TOTAL_PPY_SUPPLY) * 100) + " %")
 print("Known unclaimed genesis owner / balances")
 print("========================================")
 print(remaining_unclaimed_genesis_entries)
