@@ -1,7 +1,4 @@
 import json
-from peerplays.blockchain import Blockchain
-from peerplaysbase.account import Address
-from graphenebase.base58 import Base58
 
 TOTAL_PPY_SUPPLY = 5503920
 
